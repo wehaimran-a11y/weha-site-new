@@ -1,0 +1,118 @@
+{
+  "theme": "LIGHT (Default) with Dark Mode toggle",
+  "archetype": "Archetype 4 (Swiss & High-Contrast) + Organic Warmth for Trust",
+  "brand_identity": {
+    "name": "WeHA (We Help Automate)",
+    "tagline": "Automate Without Getting Fined, Banned, or Struck Off.",
+    "core_differentiator": "Compliance-grade automation for SMBs",
+    "vibe": "Next-gen, Apple-caliber, immersive, secure, premium"
+  },
+  "typography": {
+    "primary": {
+      "name": "Instrument Serif",
+      "usage": "Headings (H1, H2, H3), large numbers, editorial callouts. Often used in italic for emphasis.",
+      "weight": "Regular / Italic"
+    },
+    "secondary": {
+      "name": "General Sans",
+      "usage": "Body text, labels, buttons, navigation, small metadata.",
+      "weight": "Regular, Medium, Semibold"
+    },
+    "scale": {
+      "h1": "text-5xl md:text-6xl lg:text-7xl tracking-tighter leading-[1.1]",
+      "h2": "text-4xl md:text-5xl tracking-tight leading-[1.15]",
+      "h3": "text-2xl md:text-3xl tracking-tight leading-snug",
+      "body": "text-base md:text-lg leading-relaxed",
+      "label": "text-xs uppercase tracking-[0.2em] font-medium"
+    },
+    "alignment": "Left-aligned primarily to establish authority and function. Center only for the hero typography over 3D scenes."
+  },
+  "colors": {
+    "light": {
+      "background": "#f7f6f2",
+      "surface": "#f9f8f5",
+      "text_primary": "#28251d",
+      "text_secondary": "#5a564c",
+      "accent": "#01696f",
+      "border": "rgba(40, 37, 29, 0.1)"
+    },
+    "dark": {
+      "background": "#171614",
+      "surface": "#201f1c",
+      "text_primary": "#f7f6f2",
+      "text_secondary": "#a3a098",
+      "accent": "#01696f",
+      "border": "rgba(247, 246, 242, 0.1)"
+    }
+  },
+  "spacing_and_layout": {
+    "philosophy": "Generous Spacing, Optical Alignment, The Bento Grid.",
+    "containers": "max-w-7xl mx-auto px-6 md:px-12",
+    "section_padding": "py-24 md:py-32 lg:py-40",
+    "bento_grid": "Grid with 1px borders, mixing wide spans (col-span-8) and tall spans (row-span-2). Use for the 'Verticals' and 'How It Works' sections."
+  },
+  "threejs_architecture": {
+    "constraint": "RAW three.js ONLY. Do not use react-three-fiber or @react-three/drei.",
+    "concept": "The Living Compliance Network. A scroll-driven 3D choreography where the camera moves through a network of floating technology nodes connected by pulsing data streams.",
+    "technical_setup": {
+      "renderer": "A single fixed full-screen <canvas> managed by a ThreeJS class singleton or a single React useEffect. Content layers (HTML) scroll over it using position: absolute/relative and pointer-events: none (except interactive areas).",
+      "camera": "PerspectiveCamera driven by GSAP ScrollTrigger. As the user scrolls down the page, the camera progresses along a CatmullRomCurve3 path.",
+      "nodes_material": "MeshPhysicalMaterial for a frosted glass look (transmission: 1, roughness: 0.2, thickness: 0.5) to keep it premium and 'Apple-like'.",
+      "connections": "THREE.Line or thin THREE.TubeGeometry connecting nodes. In light mode, these are subtle dark/gray lines. The active data pulses are represented by the #01696f accent color traveling along the splines.",
+      "performance": "Use InstancedMesh for background data particles. Enable frustum culling. Avoid heavy shadows; use baked ambient occlusion or simple point lights."
+    }
+  },
+  "ui_components_and_motion": {
+    "html_overlay": "HTML content (typography, buttons) sits in a scrollable div layered on top of the fixed Three.js canvas. Use Framer Motion for text reveals (SplitText effect: opacity and Y translation) triggered on scroll.",
+    "buttons": "Magnetic effect on hover (Framer Motion). Solid background (#01696f) with white text, or outline variants. Use rounded-full for a premium aerodynamic feel.",
+    "cursor": "Custom magnetic dot cursor that snaps to interactive elements, snapping into a larger translucent circle on hover.",
+    "scroll": "MUST use Lenis for smooth momentum scrolling. This is critical for synchronizing the GSAP ScrollTrigger camera movements without jitter.",
+    "cards": "Glassmorphism for surfaces floating over 3D. backdrop-blur-xl, subtle 1px inner border, 0px border-radius (sharp) or slight 8px radius."
+  },
+  "page_blueprints": {
+    "Home": {
+      "hero": "Center text 'Automate Without Getting Fined.' 3D Network is heavily clustered in the background, rotating slowly. Nodes: n8n, Make, Claude.",
+      "how_it_works": "3-step scroll. Camera dives into the network. Text updates in the foreground HTML layer while 3D nodes re-arrange into a pipeline.",
+      "verticals": "Bento grid overlay. 3D camera pans left/right looking at different 'sectors' of the data web.",
+      "compliance_differentiator": "Dark mode moment. The background temporarily shifts to dark (#171614), showcasing a 'secure vault' node glowing in accent teal.",
+      "contact": "Form overlaid on a calm, slow-moving abstract 3D water/glass wave."
+    },
+    "Services": "Focus on the Hermes agent and AI capabilities. 3D features a massive central glowing 'Brain/Agent' node.",
+    "Work": "Case studies. Before/After flow diagrams implemented as 2D/3D hybrid nodes. Camera moves from a messy 'spaghetti' network (Before) to a highly organized, linear data flow (After).",
+    "About": "Founder story. 3D transitions to a macro close-up of a single 'Shield' or 'Lock' geometry, symbolizing IAM/cybersecurity roots.",
+    "Contact": "Audit request form. Clean, split layout. 3D canvas is minimal on the right side."
+  },
+  "media_urls": {
+    "abstract_glass_texture": "https://images.unsplash.com/photo-1584384689201-e0bcbe2c7f1d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGdsYXNzJTIwdGV4dHVyZSUyMDNEfGVufDB8fHx8MTc4MjQwODAzN3ww&ixlib=rb-4.1.0&q=85",
+    "cyber_abstract": "https://images.unsplash.com/photo-1644088379091-d574269d422f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTV8MHwxfHNlYXJjaHwzfHxjb3Jwb3JhdGUlMjBjeWJlcnNlY3VyaXR5JTIwYWJzdHJhY3R8ZW58MHx8fHwxNzgyNDA4MDM3fDA&ixlib=rb-4.1.0&q=85",
+    "tech_stack_icons": {
+      "note": "Use simple-icons or lucide-react in the frontend implementation. For Three.js, map these SVG URLs to canvas textures or use HTML overlays attached to 3D coordinates via THREE.Vector3.project.",
+      "n8n": "https://cdn.simpleicons.org/n8n/01696f",
+      "make": "https://cdn.simpleicons.org/make/01696f",
+      "claude": "https://cdn.simpleicons.org/anthropic/01696f",
+      "openai": "https://cdn.simpleicons.org/openai/01696f",
+      "gemini": "https://cdn.simpleicons.org/google/01696f",
+      "whatsapp": "https://cdn.simpleicons.org/whatsapp/01696f",
+      "hubspot": "https://cdn.simpleicons.org/hubspot/01696f",
+      "airtable": "https://cdn.simpleicons.org/airtable/01696f",
+      "xero": "https://cdn.simpleicons.org/xero/01696f",
+      "docusign": "https://cdn.simpleicons.org/docusign/01696f",
+      "supabase": "https://cdn.simpleicons.org/supabase/01696f",
+      "cloudflare": "https://cdn.simpleicons.org/cloudflare/01696f"
+    }
+  },
+  "testing_attributes": {
+    "rule": "All interactive and key informational elements MUST include a data-testid attribute. Use kebab-case and role-based naming.",
+    "examples": ["data-testid='hero-cta-button'", "data-testid='contact-form-submit'", "data-testid='theme-toggle-button'"]
+  },
+  "instructions_to_main_agent": [
+    "Install Three.js, GSAP, and Lenis for the core engine.",
+    "Create a singleton WebGL class or highly optimized React component for the raw three.js canvas. It must sit at z-index: -1.",
+    "Implement a ScrollTrigger that maps window.scrollY to the Three.js camera position.",
+    "Do NOT use react-three-fiber or @react-three/drei.",
+    "Ensure the HTML layer has pointer-events: none, but interactive elements (buttons, links) have pointer-events: auto.",
+    "Apply Instrument Serif for all headings and General Sans for body.",
+    "Build a custom cursor component that tracks mouse position and uses Framer Motion for magnetic hover states.",
+    "Inject the SVGs directly onto HTML nodes that track 3D space, or bake them into textures for the 3D planes to maintain the Apple-like floating tech stack feel."
+  ]
+}

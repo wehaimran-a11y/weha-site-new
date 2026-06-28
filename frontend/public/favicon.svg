@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" shape-rendering="geometricPrecision">
+  <rect width="64" height="64" rx="14" ry="14" fill="#5b3fa6"/>
+  <g fill="#f7f6f2" font-family="'General Sans','Helvetica Neue',Arial,sans-serif" font-weight="800" font-size="34" letter-spacing="-2" text-anchor="middle">
+    <text x="20" y="44">W</text>
+    <text x="46" y="44">H</text>
+  </g>
+  <line x1="33" y1="9" x2="33" y2="58" stroke="#f7f6f2" stroke-width="2.2" stroke-linecap="round" opacity="0.92"/>
+</svg>
